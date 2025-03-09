@@ -31,7 +31,7 @@ const ResumeUpload = () => {
       const file = new File([blob], "resume.pdf", { type: "application/pdf" });
       const formData = new FormData();
       formData.append("resume", file);
-      formData.append("url", fileUrl);
+      formData.append("cvurl", fileUrl);
 
       const uploadResponse = await axios.post(
         "https://highimpacttalent.onrender.com/api-v1/ai/resume-pool",
